@@ -8,16 +8,16 @@ const app = express();
 app.use(express.json());
 
 const db = new Database('data.db');
-db.exec(`CREATE TABLE IF NOT EXISTS forms (
+db.exec(`CREATE TABLE IF NOT EXISTS docs (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   docId TEXT,
-  data JSON
+  content TEXT
 )`);
 
 app.post('/save', (req, res) => {
-  const { docId, data } = req.body;
-  const stmt = db.prepare('INSERT INTO forms (docId, data) VALUES (?, ?)');
-  stmt.run(docId, JSON.stringify(data));
+  const { docId, content } = req.body;
+  const stmt = db.prepare('INSERT INTO docs (docId, content) VALUES (?, ?)');
+  stmt.run(docId, content);
   res.json({ status: 'ok' });
 });
 

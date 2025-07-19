@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/dev-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,14 +12,18 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@tiptap/core": "^2.26.1",
-    "@tiptap/extension-collaboration": "^2.26.1",
-    "@tiptap/extension-collaboration-cursor": "^2.26.1",
-    "@tiptap/starter-kit": "^2.26.1",
-    "@tiptap/suggestion": "^2.26.1",
+    "@milkdown/kit": "^7.15.1",
+    "@milkdown/plugin-collab": "^7.15.1",
+    "@milkdown/react": "^7.15.1",
+    "@milkdown/theme-nord": "^7.15.1",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
     "esbuild": "^0.25.7",
     "express": "^5.1.0",
-    "y-websocket": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.0",
+    "y-websocket": "^1.4.5",
     "yjs": "^13.6.27"
   }
 }
