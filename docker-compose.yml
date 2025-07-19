@@ -1,0 +1,16 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    ports:
+      - "1234:1234"
+    volumes:
+      - ./server/data.db:/app/data.db
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    environment:
+      - CLIENT_PORT=3000
+    depends_on:
+      - server
