@@ -5,11 +5,13 @@ const path = require('path');
 const app = express();
 
 esbuild.buildSync({
-  entryPoints: [path.join(__dirname, 'app.js')],
+  entryPoints: [path.join(__dirname, 'index.tsx')],
   bundle: true,
   outfile: path.join(__dirname, '../public/bundle.js'),
   platform: 'browser',
   format: 'esm',
+  loader: { '.ts': 'ts', '.tsx': 'tsx' },
+  jsx: 'automatic',
 });
 
 app.use(express.static(path.join(__dirname, '../public')));

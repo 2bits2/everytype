@@ -5,13 +5,11 @@
   <title>Collaborative Markdown Editor</title>
   <style>
     body { font-family: sans-serif; margin: 0; padding: 0; }
-    #editor { max-width: 800px; margin: auto; padding: 20px; border: 1px solid #ccc; min-height: 200px; }
-    .slash-command { background: #eee; border: 1px solid #ccc; position: absolute; z-index: 1000; }
+    #root { max-width: 800px; margin: auto; padding: 20px; }
   </style>
 </head>
 <body>
-  <div id="editor"></div>
-<button onclick="saveData()">Save</button>
+  <div id="root"></div>
   <script type="module" src="./bundle.js"></script>
 </body>
 </html>
