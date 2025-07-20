@@ -1,6 +1,6 @@
 const express = require('express');
 const { WebSocketServer } = require('ws');
-const setupWSConnection = require('y-websocket/bin/utils.js').setupWSConnection;
+const setupWSConnection = require('y-websocket/bin/utils').setupWSConnection;
 const http = require('http');
 const Database = require('better-sqlite3');
 
